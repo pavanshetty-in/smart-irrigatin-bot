@@ -110,7 +110,7 @@ bot.hears('Hi', (ctx) => {
         // The whole response has been received. Print out the result.
         resp.on('end', () => {
             
-            ctx.reply('last Update on: '+ JSON.parse(data).date +'\nTemprature: '+ JSON.parse(data).temp +'C \n Humidity: '+ JSON.parse(data).humidity +'% \n Soli Moisture: '+ JSON.parse(data).soilmoist + '% \n Motor Status: '+ JSON.parse(data).motorstatus +'\n 0 is On \n 1 is OFF',{
+            ctx.reply('last Update on: '+ JSON.parse(data).date +'\nTemprature: '+ JSON.parse(data).temp +'C \n Humidity: '+ JSON.parse(data).humidity +'% \n Soli Moisture: '+ JSON.parse(data).soilmoist + '% \n Motor Status: '+ JSON.parse(data).motorstatus +'\n true indicates On \n false indicates OFF',{
                 reply_markup: {
                     inline_keyboard: [
                         [{
