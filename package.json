@@ -1,0 +1,23 @@
+{
+  "name": "smart-irrigatin-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro-bot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavanshetty-in/smart-irrigatin-bot.git"
+  },
+  "author": "Pavan S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavanshetty-in/smart-irrigatin-bot/issues"
+  },
+  "homepage": "https://github.com/pavanshetty-in/smart-irrigatin-bot#readme",
+  "dependencies": {
+    "micro-bot": "^2.5.3"
+  }
+}
