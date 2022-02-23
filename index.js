@@ -1,5 +1,9 @@
 const { Composer } = require('micro-bot')
+const request = require('request');
 const bot = new Composer()
+
+
+
 
 bot.start((ctx) => { 
     ctx.reply('Welcome to Smart Irrigation Project');
@@ -41,8 +45,11 @@ bot.hears('hi', (ctx) => {
     });
 
     bot.action('dog', ctx => {
-        ctx.reply('dog👍 \n hello')
-    
+        request('https://rnsit-mca-miniproject.herokuapp.com/latest', { json: true }, (err, res, body) => {
+            if (err) { return console.log(err); }
+            ctx.reply(body.explanation)
+            console.log(body.explanation);
+          });
     })
     bot.action('cat', ctx => {
         ctx.reply('cat👍')
